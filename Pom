@@ -1,0 +1,44 @@
+Pom Setting
+// Code
+
+dependencies
+  spring-webmvc
+  javax-servlet-api
+  javax.servlet-jsp-api
+  jstl
+  junit
+  
+// secrity settings
+<properties>
+  <maven.compiler.target>9</maven.compiler.target>
+  <maven.compiler.source>9</maven.compiler.source>
+  <springframework.version>5.0.4.RELEASE</springframework.version>
+  <springsecurity.version>5.0.4.RELEASE</springsecurity.version>
+</properties>
+  
+build settings
+
+<build>
+
+		<finalName>spring-security-demo</finalName>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-war-plugin</artifactId>
+						<version>3.2.0</version>
+				</plugin>
+			  <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.7.0</version>
+                <configuration>
+                    <source>9</source>
+                    <target>9</target>
+                    <showWarnings>true</showWarnings>
+                    <showDeprecation>true</showDeprecation>
+                </configuration>
+         </plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
