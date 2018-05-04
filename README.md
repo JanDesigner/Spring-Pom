@@ -1,0 +1,33 @@
+# Spring-Project-demo
+
+CREATING DATABASE FROM SETTING UP JDBC ON SPRING
+
+CREATE DATABASE SPRING;
+USE SPRING;
+
+CREATE TABLE users ( username varchar(55) not null primary key ,
+                     password varchar(55) not null ,
+                     enabled tinyint not null );
+
+CREATE TABLE authorities ( username varchar(50) not null,
+	                         authority varchar(50) not null,
+                           UNIQUE KEY(username,authority),
+                           FOREIGN KEY (username) REFERENCES users(username)          
+);
+
+
+INSERT INTO USERS 
+VALUES 
+( 'john','{noop}test123',1),
+( 'mary','{noop}test123',1),
+( 'susan','{noop}test123',1);
+
+
+INSERT INTO authorities 
+VALUES 
+('john','ROLE_EMPLOYEE'),
+('mary','ROLE_EMPLOYEE'),
+('mary','ROLE_MANAGER'),
+('susan','ROLE_EMPLOYEE'),
+('susan','ROLE_ADMIN');
+
