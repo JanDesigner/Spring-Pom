@@ -1,0 +1,20 @@
+Resource
+path = src/main/resource 
+
+persistence-mysql-properties
+
+# JDBC Properties
+
+jdbc.driver=com.mysql.jdbc.Driver;
+jdbc.url=jdbc:mysql://localhost:3306/spring
+jdbc.user=student
+jdbc.password=student
+
+#c3p0 Properties
+
+connection.pool.initializePoolSize=5
+connection.pool.minPoolSize=5
+connection.pool.maxPoolSize=20
+connection.pool.maxIdleTime=3000
+
+
