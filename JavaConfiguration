@@ -1,5 +1,6 @@
 package com.security.project.config;
 
+import java.beans.PropertyVetoException;
 import java.util.logging.Logger;
 
 import javax.sql.DataSource;
@@ -45,8 +46,9 @@ public class ConfigJava {
 		try {
 		//jdbc driver
 		securityDataSource.setDriverClass(env.getProperty("jdbc.driver"));
-		} catch ( Exception E ) {
-			E.printStackTrace();
+
+		} catch (PropertyVetoException exc ) {
+			throw new RuntimeException(exc);
 		}
 		logger.info("==> jdbc url: " + env.getProperty("jdbc.url"));
 		logger.info("==> jdbc url: " + env.getProperty("jdbc.user"));
@@ -65,7 +67,8 @@ public class ConfigJava {
 		securityDataSource.setMaxPoolSize(
 				getIntProperty("connection.pool.maxPoolSize"));
 		securityDataSource.setMaxIdleTime(
-				getIntProperty("connection.pool.naxIdleTime"));
+				getIntProperty("connection.pool.maxIdleTime"));
+		
 		
 		return securityDataSource;
 	}
