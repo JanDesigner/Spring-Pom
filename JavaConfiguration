@@ -60,13 +60,12 @@ public class ConfigJava {
 		//connection pool c3p0
 		securityDataSource.setInitialPoolSize(
 				getIntProperty("connection.pool.initialPoolSize"));
-		securityDataSource.setInitialPoolSize(
+		securityDataSource.setMinPoolSize(
 				getIntProperty("connection.pool.minPoolSize"));
-		securityDataSource.setInitialPoolSize(
+		securityDataSource.setMaxPoolSize(
 				getIntProperty("connection.pool.maxPoolSize"));
-		securityDataSource.setInitialPoolSize(
+		securityDataSource.setMaxIdleTime(
 				getIntProperty("connection.pool.naxIdleTime"));
-		
 		
 		return securityDataSource;
 	}
