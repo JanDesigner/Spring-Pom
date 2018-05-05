@@ -1,0 +1,6 @@
+@Autowired
+private DataSource securityDataSource;
+
+
+
+auth.jdbcAuthentication().dataSource(securityDataSource);
