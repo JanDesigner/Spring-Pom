@@ -10,5 +10,13 @@
 // java 9 Error Tag
 --add-modules java.xml.bind
 
+//tag visible
+	<security:authorize access = "hasRole('MANAGER')">
+	<a href = "${pageContext.request.contextPath}/leaders">Leaders</a>
+	</security:authorize>
+	<security:authorize access = "hasRole('ADMIN')">
+	<a href = "${pageContext.request.contextPath}/admins">Admins</a>
+	</security:authorize>
+
 
 
