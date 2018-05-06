@@ -4,6 +4,9 @@
 // form shortcut
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 
+// tag security
+<%@ taglib prefix="security" uri="http://www.springframework.org/security/tags" %>
+
 // java 9 Error Tag
 --add-modules java.xml.bind
 
