@@ -8,6 +8,7 @@ dependencies
   jstl
   junit
   
+  spring-jdbc // lol
   spring-security-web // spring security
   spring-security-config // spring security
   mysql-connector-java // mysql 
