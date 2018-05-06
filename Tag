@@ -1,0 +1,11 @@
+// jsp tag
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
+// form shortcut
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+
+// java 9 Error Tag
+--add-modules java.xml.bind
+
+
+
